@@ -36,7 +36,6 @@ func (m *Matcher) Type() match.MatcherType {
 }
 
 func (m *Matcher) Match(store vulnerability.Provider, p pkg.Package) ([]match.Match, []match.IgnoreFilter, error) {
-
 	if p.Type == syftPkg.LinuxKernelPkg && isMainDistro(p.Distro) {
 		return nil, nil, nil
 	}
